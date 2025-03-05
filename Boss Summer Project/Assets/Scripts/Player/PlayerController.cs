@@ -195,11 +195,6 @@ public class PlayerController : Damageable
     [SerializeField] private float placementRange;
 
     private Transform blocksParent;
-<<<<<<< Updated upstream
-    #endregion
-
-    private InventoryDisplay persistentInventoryDisplay;
-=======
     private InventoryDisplay persistentInventoryDisplay;
     #endregion
 
@@ -228,7 +223,6 @@ public class PlayerController : Damageable
     {
         StatisticsSystem.LoadStatistics();
     }
->>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()

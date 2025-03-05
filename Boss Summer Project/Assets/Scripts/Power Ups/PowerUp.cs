@@ -97,10 +97,7 @@ public abstract class PowerUp : MonoBehaviour
     - Set active to false
     */
     public void RemoveEffectFully() {
-<<<<<<< Updated upstream
-=======
         playerScript.PlayerEffects.Remove(this);
->>>>>>> Stashed changes
         RemoveEffect();
         PowerUpBarManager.UpdatePowerUpIcons();
         effectInProgress = false;
@@ -126,11 +123,7 @@ public abstract class PowerUp : MonoBehaviour
     }
 
     //Adds the "health bar" for this power up to the UI
-<<<<<<< Updated upstream
-    private void AddToUI() {
-=======
     public void AddToUI() {
->>>>>>> Stashed changes
         powerUpBarObj = Instantiate(powerUpBar, powerUpBarGrid.transform);
         powerUpBarScript = powerUpBarObj.GetComponent<PowerUpBar>();
 
@@ -138,17 +131,13 @@ public abstract class PowerUp : MonoBehaviour
     }
 
     //Removes the "health bar" for this power up from the UI
-<<<<<<< Updated upstream
-    public void RemoveFromUI() {
-        Destroy(powerUpBarObj);
-=======
     public void RemoveFromUI()
     {
         // Destroy every power up bar with the same power up ID
         // Only for the gravity power up since theres only 1 instance of a bar for every power up
         foreach(Transform t in powerUpBarGrid.transform)
         {
-            if (string.Equals(t.name, powerUpId))
+            if (string.Equals(t.name, "Inverted Gravity"))
             {
                 Destroy(t.gameObject);
             }
@@ -156,7 +145,6 @@ public abstract class PowerUp : MonoBehaviour
         if (powerUpBarObj != null) {
             Destroy(powerUpBarObj);
         }
->>>>>>> Stashed changes
     }
 
     public void decreaseRemainingDuration(float time) {
